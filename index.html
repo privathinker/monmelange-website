@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Melange Jewelry | Timeless Beauty</title>
-    <!-- Şık fontlar (Playfair Display ve Montserrat) -->
+    <!-- Elegant fonts (Playfair Display and Montserrat) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050505; /* Derin siyah */
-            --gold: #d4af37;     /* Logo altın sarısı */
+            --bg-color: #050505; /* Deep black */
+            --gold: #d4af37;     /* Logo gold */
             --text-light: #f5f5f5;
             --text-muted: #aaaaaa;
         }
@@ -36,7 +36,7 @@
             color: var(--gold);
         }
 
-        /* Kaydırma (Scroll) Animasyonları */
+        /* Scroll Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(40px);
@@ -47,7 +47,7 @@
             transform: translateY(0);
         }
 
-        /* Karşılama (Hero) Alanı */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -78,7 +78,7 @@
             font-style: italic;
         }
 
-        /* Bölüm Standartları */
+        /* Section Standards */
         .section {
             padding: 120px 20px;
             max-width: 1000px;
@@ -104,7 +104,7 @@
             transform: translateX(-50%);
         }
 
-        /* Galeri / Mağaza Görseli */
+        /* Gallery / Boutique Image */
         .gallery {
             display: flex;
             justify-content: center;
@@ -119,7 +119,7 @@
             border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
-        /* İletişim Bilgileri */
+        /* Contact Info */
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -168,35 +168,35 @@
 </head>
 <body>
 
-    <!-- Karşılama Ekranı -->
+    <!-- Hero Section -->
     <section class="hero fade-in">
         <img src="logo.jpg" alt="Mon Melange Jewelry Logo" class="logo-img">
         <p class="tagline serif-text">TIMELESS BEAUTY • UNIQUELY YOURS</p>
     </section>
 
-    <!-- Mağaza / Galeri -->
+    <!-- Boutique / Gallery -->
     <section class="section">
-        <h2 class="section-title fade-in">Mağazamız</h2>
-        <p class="fade-in" style="color: var(--text-muted); font-size: 1.1rem;">Zarafetin, şıklığın ve kusursuz işçiliğin buluşma noktası. Sizi eşsiz tasarımlarımızı yakından görmeye davet ediyoruz.</p>
+        <h2 class="section-title fade-in">Our Boutique</h2>
+        <p class="fade-in" style="color: var(--text-muted); font-size: 1.1rem;">Where elegance, style, and flawless craftsmanship meet. We invite you to discover our unique designs in person.</p>
         <div class="gallery fade-in">
-            <!-- Düzenlediğimiz dükkan içi görsel -->
-            <img src="magaza.jpg" alt="Mon Melange Mağaza İçi">
+            <!-- Edited interior image -->
+            <img src="magaza.jpg" alt="Mon Melange Boutique Interior">
         </div>
     </section>
 
-    <!-- İletişim -->
+    <!-- Contact -->
     <section class="section">
-        <h2 class="section-title fade-in">İletişim</h2>
+        <h2 class="section-title fade-in">Contact</h2>
         <div class="contact-info fade-in">
             <div class="contact-item">
-                <span class="serif-text">Erol Guldal</span>
+                <span class="serif-text">Erol Güldal</span>
             </div>
             <div class="contact-item">
-                <span class="serif-text">Telefon</span>
+                <span class="serif-text">Phone</span>
                 <p><a href="tel:+306948779695">+30 694 877 9695</a></p>
             </div>
             <div class="contact-item">
-                <span class="serif-text">Adres</span>
+                <span class="serif-text">Address</span>
                 <p>Metaxa Street 27-29<br>Euro Mall<br>16674 Glyfada, Athens</p>
             </div>
         </div>
@@ -206,7 +206,7 @@
         <p>&copy; 2026 Mon Melange Jewelry. All Rights Reserved.</p>
     </footer>
 
-    <!-- Animasyonların Çalışması İçin JavaScript -->
+    <!-- JavaScript for Scroll Animations -->
     <script>
         const observerOptions = {
             root: null,
@@ -218,7 +218,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Sadece bir kez animasyon yapsın
+                    observer.unobserve(entry.target); // Animate only once
                 }
             });
         }, observerOptions);
@@ -227,7 +227,7 @@
             observer.observe(element);
         });
         
-        // Sayfa ilk açıldığında üst kısmın belirmesi
+        // Show hero section on load
         window.onload = () => {
             document.querySelector('.hero').classList.add('visible');
         }
